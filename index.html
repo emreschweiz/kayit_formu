@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spor Salonu Kayıt Formu</title>
+    <style>
+        body { 
+            font-family: Arial; 
+            display: flex;
+            justify-content: center;
+            padding-top: 30px;
+        }
+        .form {
+            width: 300px;
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+        input, select, textarea { 
+            width: 100%; 
+            margin-bottom: 10px; 
+        }
+        .secenekler {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .secenekler label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .secenekler input {
+            width: auto;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form">
+
+        <h1 id="title">Spor Salonu Kayıt Formu</h1>
+
+        <p id="aciklama">Lütfen üyelik için gerekli bilgileri doldurunuz</p>
+
+        <form id="kayit-form">
+
+            <label id="name-label" for="name">İsim:</label>
+            <input id="name" type="text" placeholder="İsminiz" required>
+
+            <label id="epostasatiri" for="email">E-posta:</label>
+            <input id="email" type="email" placeholder="E-posta adresiniz" required>
+
+            <label id="numarasatiri" for="number">Yaş:</label>
+            <input id="number" type="number" min="10" max="100" placeholder="Yaşınız" required>
+
+            <label for="acilirmenu">Tercih Ettiğiniz Branş:</label>
+            <select id="acilirmenu">
+                <option value="">Seçiniz</option>
+                <option value="fitness">Fitness</option>
+                <option value="pilates">Pilates</option>
+                <option value="kickboks">Kickboks</option>
+            </select>
+
+            <label>Cinsiyet:</label>
+            <div class="secenekler">
+                <label><input type="radio" name="cinsiyet" value="erkek"> Erkek</label>
+                <label><input type="radio" name="cinsiyet" value="kadin"> Kadın</label>
+            </div>
+
+            <label>Hizmet Tercihleri:</label>
+            <div class="secenekler">
+                <label><input type="checkbox" value="pt"> Kişisel Antrenör</label>
+                <label><input type="checkbox" value="beslenme"> Beslenme Programı</label>
+            </div>
+
+            <label for="yorum">Ek Not:</label>
+            <textarea id="yorum" placeholder="Eklemek istediğiniz not"></textarea>
+
+            <input id="submit" type="submit" value="Gönder">
+
+        </form>
+
+    </div>
+
+</body>
+</html>
